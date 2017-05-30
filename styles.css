@@ -1,0 +1,48 @@
+#main{
+width:830px;
+height:650px;
+margin:0 auto;
+font-family:'Ubuntu',sans-serif;
+}
+ #form{
+border:1px solid #ccc;
+width:300px;
+padding: 10px 50px 15px;
+margin-top:20px;
+box-shadow:0 0 15px;
+border-radius:6px;
+margin-left:200px;
+}
+#main h1{
+margin-top:40px;
+text-align:center;
+}
+input[type="text"]{
+width:100%;
+margin-top:10px;
+height:35px;
+margin-bottom:25px;
+padding:10px;
+border:3px solid #2BC1F2;
+}
+textarea{
+width:100%;
+border:3px solid #2BC1F2;
+padding:10px;
+margin-bottom:25px;
+margin-top:10px;
+height:100px;
+resize:none;
+}
+input[type="submit"]{
+width:50%;
+padding:15px 15px;
+margin-left:80px;
+background-color:#2BC1F2;
+border:none;
+color:#fff;
+font-size:18px;
+font-weight:700;
+cursor:pointer;
+font-family:'Ubuntu',sans-serif;
+}
