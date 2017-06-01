@@ -56,11 +56,11 @@ function validateForm() {
         alert("The age must contain only digits");
         return false;
     }
-    if(!mail1.match(mailValue)){
+    else if(!mail1.match(mailValue)){
         alert('Email must start only with user_');
         return false;
     }
-    if(date1 !== currentDate){
+    else if(date1 !== currentDate){
         alert("Sorry,you have entered an incorrect date");
     }
 }
