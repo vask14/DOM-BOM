@@ -45,11 +45,14 @@ function validateForm() {
     var age1 = document.getElementById('age1').value;
     var mail1 = document.getElementById('mail1').value;
     var date1 = document.getElementById('date1').value;
-    var d = new Date();
-    var curr_date = d.getDate();
-    var curr_month = d.getMonth() + 1;
-    var curr_year = d.getFullYear();
-    var currentDate =(curr_date + "." + '0' + curr_month + "." + curr_year);
+    var MyDate = new Date();
+    var MyDateString = '';
+    MyDate.setDate(MyDate.getDate());
+    var tempoMonth = (MyDate.getMonth()+1);
+    var tempoDate = (MyDate.getDate());
+    if (tempoMonth < 10) tempoMonth = '0' + tempoMonth;
+    if (tempoDate < 10) tempoDate = '0' + tempoDate;
+    MyDateString = tempoDate + '.' + tempoMonth + '.' + MyDate.getFullYear();
     var mailValue = /^user_[^;:#*%S]/;
     var digits = /^[0-9]+$/;
     if(!age1.match(digits)){
@@ -60,7 +63,7 @@ function validateForm() {
         alert('Email must start only with user_');
         return false;
     }
-    else if(date1 !== currentDate){
+    else if(date1 !== MyDateString){
         alert("Sorry,you have entered an incorrect date");
     }
 }
